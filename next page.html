@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<title>website</title>
+	<style>
+		body{
+			background-color:#161616;
+		}
+        body{
+	margin:0px;
+	padding:0px;
+	background-color:#161616;	
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+.main{
+	padding:30px 50px;
+	position:relative;
+	width:100%;
+	height: 100vh;
+	box-sizing: border-box;
+	background-size: 1330px;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	background-image: url("../images/bg.png");
+	background-color: #000000;
+}
+nav{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-family: calibri;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	box-sizing: border-box;
+	padding: 10px 50px;
+	background-color:#000000;
+	box-shadow:2px 2px 12px rgba(0,0,0,0.05); 
+	z-index: 1;
+}
+ 
+.menu{
+	display: flex;
+}
+.menu li a{
+	padding: 10px 15px;
+	color:#6c707c;
+	font-size: 12px;
+	
+}
+.lang{
+	color:#292929;
+}
+.logo{
+    
+  top: 0;
+  left: 2%;
+  width: 50px;
+
+}
+.logo:hover{
+            cursor: pointer;
+        }
+.web{
+            position: absolute;
+            left: 10%;
+            font-size: 40px;
+            text-decoration: none;
+            color: white;
+        }
+ .web:hover{
+            text-shadow:0px 2px 25px white;
+            font-weight: bold;
+        }
+.toggle{
+	display: none;
+}
+.active a,
+.menu li a:hover{
+	background-color:#ffffffed;
+	color:#000000;
+	font-weight: bold;
+	transition: all ease 0.4s;
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.879);
+}
+.name{
+	font-family: calibri;
+	width: 500px;
+	position: absolute;
+	left: 20%;
+	top: 40%;
+	transform: translate(-20%,-50%);
+	margin-bottom:100%;
+}
+.name p:nth-child(1),.name .details{
+	color:#6c707c;
+	font-size: 16px;
+	margin-bottom: 10%;
+}
+.name h1{
+	font-family:Poppins;
+	font-size: 40px;
+	margin:0px;
+	letter-spacing: 3px;
+	color:#292929;
+}
+.image{
+	margin-left: 110%;
+	margin-top: 52%;
+}
+.cv-btn{
+	width:200px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #292929;
+	color:#FFFFFF;
+    
+}
+.cv-btn:hover{
+	background-color: #ffffffdb;
+	transition: all ease 0.5s;
+    color: #000000;
+    cursor: pointer;
+}
+.black-line {
+  align-self: end;
+  width: 50%;
+  height: 15%;
+  margin-bottom: 4em;
+  position: absolute;
+	bottom:0px;
+	left: -3%;
+	border-right: 1px solid  rgba(41,41,41,0.30);
+}
+ 
+.black-line::after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 11px 0 11px;
+ border-color:  #292929 transparent transparent transparent;
+  right: -.7em;
+  bottom: -2px;
+}
+ 
+ 
+.social{
+	position: absolute;
+	left: 50px;
+	bottom: 50px;
+	display: flex;
+ 
+}
+.social a{
+	margin: 6px 12px;
+ 
+}
+.social i{
+	color:rgba(18,17,17,0.40);
+	font-size: 14px;
+}
+.social a:hover i{
+	color:#ffffff;
+	transition: all ease 0.5s;
+}
+
+.about{
+	width:100%;
+	height: 100%;
+	background-color:#161616;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 50px 5% 0px 5%;
+	position: relative;
+}
+.about-text{
+	font-family: calibri;
+	width: 50%;
+}
+.about-text h1{
+	font-size: 5rem;
+	color:#d2dedb;
+}
+.about-text h2{
+	font-size: 3rem;
+	color:#FFFFFF;
+	font-weight: 400;
+}
+.about-text h1,h2{
+	margin: 0px;
+	padding: 0px;
+}
+.about-text p{
+	font-size: 1.2rem;
+	color:rgba(255,255,255,0.90);
+	
+}
+.about-text button{
+	width: 180px;
+	height: 40px;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	background-color:#ffffffe3;
+    color: #000000;
+    cursor: pointer;
+}
+.about-text button:hover{
+	background-color: #FFFFFF;
+	transition: all ease 0.3s;
+    cursor: pointer;
+}
+.services{
+		width:100%;
+	height:100vh;
+	box-sizing: border-box;
+	font-family: calibri;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 40px ;
+	
+}
+ 
+.s-heading h1{
+	color:#FFFFFF;
+	font-size: 3rem;
+	margin: 0px;
+	padding: 0px;
+	
+}
+.s-heading p{
+	color:rgba(255,255,255,0.30);
+	font-size: 1rem;
+	margin: 0px;
+	padding: 0px;
+}
+.s-heading{
+	text-align: center;
+	margin: 20px 0px;
+}
+.s-box{
+	background-color: #2B2B2B;
+	width:350px;
+	height: 500px;
+	margin: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+	position: relative;
+}
+.b-container{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+ 
+	
+}
+.s-b-img{
+	width: 100%;
+	height: 70%;
+	
+}
+.s-b-img img{
+	width:100%;
+	height: 100%;
+	
+}
+.s-b-text{
+	width: 100%;
+	height: 30%;
+	background-color:#1E1E1E;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.s-b-text a{
+	margin: 0px;
+	color:#FFFFFF;
+	font-size: 1.1rem;
+	font-family: calibri;
+	display: block;
+    display: -webkit-box;
+	max-width: 80%;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.s-b-text a:hover{
+	color:rgba(255,255,255,0.50)
+}
+.s-type{
+	font-family: calibri;
+	color:#FFFFFF;
+	background-color: #151515;
+	padding: 10px 15px;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 18px;
+	border-radius: 0px 0px 10px 10px;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+}
+.s-box:hover{
+	transform:translateY(-10px);
+	transition: all ease 0.3s;
+	
+}
+.portfolio{
+	width:100%;
+	box-sizing: border-box;
+	font-family: calibri;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 60px 2% 20px 2%;
+}
+ 
+.p-headind{
+	font-family: calibri;
+	font-size: 1.7rem;
+	text-align: center;
+	color:#FFFFFF;
+	font-weight: 400;
+	padding: 10px 20px;
+	background-color: #211f1f;
+	letter-spacing: 2px;
+	border-radius: 3px;
+	box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
+	
+}
+.p-box{
+ 
+	background-color: #201e1e;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 2px 2px 13px rgba(0,0,0,0.3);
+	position: relative;
+ 
+}
+.p-box img{
+ 
+width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.p-container{
+	width: 50%;
+	height: 60%;
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows: auto auto;
+	grid-gap: 10px;
+}
+.overlay-text{
+	font-family: calibri;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgba(0, 0, 0, 0.8);
+	display:none;
+	
+}
+.overlay-text h1,p{
+	color: #FFFFFF;
+}
+.overlay-text h1{
+	font-size: 2.2rem;
+	margin: 0px;
+	padding: 0px;
+	letter-spacing: 2px;
+	
+}
+.overlay-text p{
+	font-size: 1.2rem;
+	margin: 0px;
+ 
+ 
+}
+.p-box:hover .overlay-text{
+	display: flex;
+	
+}
+.parts{
+    height: 80%;
+    width: 80%;
+
+}
+.contact-btn{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	height: 200px;
+	background-color: #000000;
+	margin: 20px 0px;
+	box-sizing: border-box;
+	box-shadow:2px 0px 20px rgba(255, 252, 252, 0.4); 
+}
+.c-b-heading{
+	font-size: 2rem;
+	color:#1E1E1E;
+	font-family: calibri;
+	margin: 10px;
+	padding: 5px;
+	letter-spacing: 4px;
+	border-bottom: 2px solid #1E1E1E;
+	
+}
+.contact-btn button{
+	color:#FFFFFF;
+	font-size: 1rem;
+	font-family: calibri;
+	width:150px;
+	height: 40px;
+	margin: 10px;
+	background-color: #1E1E1E;
+	border: none;
+	outline: none;
+	box-shadow: 2px 5px 6px rgba(0,0,0,0.2);
+}
+.contact-btn button:hover{
+	background-color: #000000;
+	color:#ffffff;
+	transition: all ease 0.5s;
+	font-weight: bold;
+}
+@media(max-width:1190px){
+	#main{
+		background-size: 1150px !important;
+		
+	}
+	.name{
+		left: 10%;
+		top: 50%;
+		transform: translate(-10%,-50%);
+	}
+	.about-model img{
+		height:400px;
+	}
+	#services{
+		height:auto;
+	}
+	.b-container{
+		flex-wrap: wrap;
+	}
+	.s-box{
+		flex-grow: 1;
+	}
+	.s-b-img img{
+		object-fit:cover;
+	}
+	#contact-form form{
+		width:95% !important;
+	}
+ 
+}
+@media(max-width:970px){
+	#main{
+		background-image: none !important;
+		
+	}
+	.name{
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.about-model{
+		display: none;
+	}
+	#about{
+		justify-content: center;
+		padding-top: 0px;
+	}
+	.about-text{
+		width: 90%;
+	}
+	.about-text h1{
+		font-size:4rem;
+	}
+	
+	.p-container{
+		width:100%;
+	
+	}
+	
+}
+@media(max-width:900px){
+	.toggle{
+			display:block;
+		}
+		.toggle:before{
+	content:'\f0c9';
+	font-family: fontAwesome;
+	line-height: 0px;
+			margin-left:-30px;
+}
+		.toggle.active:before{
+	content:'\f00d' !important;
+	
+		}
+	nav{
+		padding:10px 30px;
+	}
+	
+	nav ul{
+		position:absolute;	
+		width: 100%;
+		height:auto;
+		box-sizing:border-box;
+		background-color:#0F0F0F;
+		top: 50px;
+		left: 0;
+		transition: 0.5s;
+		overflow: hidden;
+		display: none !important;
+		border:3px solid #1F1F1F;
+	}
+	
+		nav ul li a{
+		border-bottom: 1px solid rgba(255,255,255,0.10) ;
+		color:#ffffff !important;
+		width: 100%;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0px !important;
+		padding: 0px !important;
+	}
+		nav ul{
+			padding:0px;
+			margin:0px;
+		}
+ 
+		.active-menu {
+		display: block !important;
+	}
+	
+		nav ul li a:hover{
+			background-color:rgba(27,29,32,0.15);
+ 
+			}
+	
+	
+	.p-container{
+		grid-template-columns:1fr 1fr;
+	grid-template-rows:auto;
+	grid-gap: 10px;
+		height: auto;
+	}
+	.c-b-heading{
+		font-size: 1.4rem;
+		text-align: center;
+	}
+	#contact-form{
+		padding: 20px;
+		height: auto;
+		box-sizing: border-box;
+	}
+	
+	
+	#contact-form form {
+		flex-direction: column;
+		height:auto;
+		padding: 20px;
+		width:90% !important;
+ 
+	}
+	.contact-left,.contact-right{
+		width:100%;
+		border: none;
+	}
+	.f-name,.f-email{
+		width: 100%;
+ 
+	}
+	.f-name input,.f-email input{
+		width:100%;
+		border: none;
+		background-color: #262626 !important;
+		padding: 10px;
+		box-sizing: border-box;
+		height: 40px;
+		
+	}
+	textarea{
+		background-color: #262626 !important;
+		margin: 10px 0px;
+		padding: 10px;
+		height: 200px !important;
+		width:100% !important;
+	}
+	.message{
+		margin:0px;
+	}
+	#contact-form form h1{
+		margin:5px 0px;
+	}
+	
+	
+}
+ 
+@media(max-width:600px){
+	.p-container{
+		grid-template-columns:1fr ;
+		grid-template-rows: auto;}
+	.c-b-heading{
+		font-size: 1.2rem;
+		text-align: center;
+		margin: 0px 10%;
+	}
+	.name{
+		width:60%;
+	}
+	
+	
+	.black-line{
+		margin-bottom: 20px;
+	}
+	.social{
+		left: 30px;
+		transform: translateX(-10px);
+	}
+}
+@media(max-width:400px){
+	.s-box{
+		width: 100%;
+		height:400px;
+	}
+}
+.footer {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    
+
+}
+
+
+
+	</style>
+	
+</head>
+<body>
+    <section class="main">
+        
+        <nav>
+        <img src="logo.jpg" alt="" class="logo">
+        <span class="web">Lamborghini</span>
+        <div class="toggle"></div>
+        <ul class="menu">
+        <li class="active"><a href="#main" >Home</a></li>	
+        <li><a href="">About</a></li>	
+        <li><a href="#services">Services</a></li>	
+        <li><a href="#carparts">Car Parts</a></li>		
+        <li><a href="login.html">Login</a></li>	
+        </ul>
+        <a href="#" class="lang">En</a>
+        </nav>
+     </section>
+    
+     <div class="name">
+		<div class="image">
+        <img src="https://th.bing.com/th/id/OIP.o2u2ELjjf6KklmgiTa5ecwHaEK?w=291&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7"></img></div>
+        <p>Welcome</a>
+        <h1>Lamborghini Huracan</h1>
+        <p class="details">The Petrol engine is 5204 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Huracan has a mileage of 10.6 to 11.24 kmpl & Ground clearance of Huracan is 125mm. The Huracan is a 2 seater 10 cylinder car and has length of 4459mm, width of 1924mm and a wheelbase of 2620mm.<br> 
+            &rarr;&emsp;Sculptured and sensual, the Huracán’s design is based on the spiky hexagonal forms of the carbon atom, while the seamless roof profile is an unmistakable mark of the Lamborghini DNA. <br>
+            &rarr;&emsp;The Huracán is unique even in the dark, thanks to the alluringly “technological” light of its full-LED lighting system. Choose your favourite Lamborghini Huracán and discover its technical specifications<br></span>
+           </p>
+        <a href="https://www.lamborghini.com/en-en" class="cv-btn">More details</a>
+        
+        </div>
+        <div class="black-line" ></div>
+        <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>	
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>	
+        </div>
+        	<section class="about">
+	<div class="about-text">
+	<h1>About Us</h1>
+	<h2>Lamborghini Aventador LP 700-4</h2>
+	<p>The second fastest Lamborghini sports car is the Lamborghini Sian FKP 37. Its maximum speed is 217 mph (350 kph).
+
+        The second position is shared by three other sports cars of Lamborghini. They all have the same maximum speed as the Sian FKP 37. These are, Lamborghini Centenario, Lamborghini Aventador LP 700-4, and Lamborghini Sian FKP 37.
+        
+        </p>
+	<button><a href="https://www.lamborghini.com/en-en"> View More Details</a></button>
+	</div>
+	<div class="about-model">
+	<img src="https://images.pexels.com/photos/9814981/pexels-photo-9814981.jpeg?auto=compress&cs=tinysrgb&w=600" alt="model"/>	
+	</div>
+	</section>
+<section class="services">
+<div class="s-heading">
+<h1>Models</h1>
+<p>Here Is The Some Model.</p>
+</div>
+<div class="b-container">
+
+<div class="s-box">
+<div class="s-b-img">
+    <div class="s-type">HURACÁN</div>
+    <img src="https://images.pexels.com/photos/9661294/pexels-photo-9661294.jpeg?auto=compress&cs=tinysrgb&w=600">
+</div>
+<div class="s-b-text">
+<a href="https://www.cardekho.com/overview/Lamborghini_Urus/Lamborghini_Urus_V8.htm">It is powered by a 3996 cc engine which is available with a Automatic transmission. The 3996 cc engine puts out 641bhp@6000rpm of power and 850nm@2250-4500rpm of torque.
+
+</a>	
+</div>
+</div>
+<div class="s-box">
+<div class="s-b-img">
+    <div class="s-type">AVENTADOR</div>
+    <img src="https://images.pexels.com/photos/10292235/pexels-photo-10292235.jpeg?auto=compress&cs=tinysrgb&w=600">
+</div>
+<div class="s-b-text">
+<a href="https://www.cardekho.com/lamborghini/huracan-evo">Lamborghini has launched the Huracan Sterrato in India. The off-road capable version of the Huracan gets an improved ground clearance, new 19-inch alloy wheels and tyres with run-flat technology.</a>	
+</div>
+</div>
+<div class="s-box">
+<div class="s-b-img">
+    
+    <div class="s-type">Urus</div>
+    <img src="https://images.pexels.com/photos/10394787/pexels-photo-10394787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+</div>
+<div class="s-b-text">
+<a href="https://www.cardekho.com/lamborghini/lamborghini-aventador-specifications.htm">The Lamborghini Aventador has 1 Petrol Engine on offer. The Petrol engine is 6498 cc . It is available with Automatic transmission
+    .Depending upon the variant and fuel type the Aventador has a mileage of & Ground clearance of Aventador is 125mm.</a>	
+</div>
+</div>
+</div>
+</section>
+  <section class="portfolio">
+	<h1 class="p-headind">Car Parts</h1>
+	<div class="p-container">
+	<div class="p-box">
+	<div class="overlay-text">
+	<h1>Motor</h1>
+	<p>Model parts</p>	
+	</div>
+	<img src="https://th.bing.com/th/id/OIP.npLUPsfKTtm8rH77BOLmvgHaGl?w=203&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+	</div>
+	<div class="p-box">
+	<div class="overlay-text"> 
+	<h1>Brake</h1>
+	<p>Model parts</p>	
+	</div>
+	<img src="https://th.bing.com/th/id/OIP.3i2NggvUNOZ4K7q_DksfFwAAAA?w=148&h=160&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+	</div>
+	<div class="p-box">
+	<div class="overlay-text">
+	<h1>Wheel</h1>
+	<p>Model parts</p>	
+	</div>
+	<img src="https://th.bing.com/th/id/OIP.BqIs98QaptQ8_WjbWd29hwHaHa?w=154&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+	</div>
+
+	</section>
+	<section class="contact-btn">
+	<h1 class="c-b-heading">If You Have Any Problem can you contact me ?</h1>
+		<button >Contact Me</button>
+    
+    
+      <section class="footer">
+       <h3>All copyright@2023</3>
+</section>
+  
+    <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
+	<script type="text/javascript">
+	
+		  
+	  $(document).ready(function(){
+	 $('.toggle').click(function(){
+		 $('.toggle').toggleClass('active')
+		 
+		 $('nav ul').toggleClass('active-menu')
+		
+		 
+	 })
+ });
+	
+	
+
+
+
+window.onscroll = () => {
+    
+}
+
+let header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+   header.classList.toggle('shadow', window.scrollY > 0);
+});
+    </script>
+  
+
+</body>
+</html>
+
